@@ -1,0 +1,2 @@
+# coords
+coords discord-bot
