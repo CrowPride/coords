@@ -5,6 +5,7 @@ from discord.ext import commands
 import asyncio
 from datetime import datetime
 import sqlite3
+import os
 
 
 description = 'Verwaltet Koordinaten.'
@@ -140,8 +141,7 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS gamer(
 db.commit()
 
 
-BOT_TOKEN = 'NDY1ODg1MTg3OTM5NTAwMDQy.DiUBqA.3dH4VtGcpRpG6U75yOdJh9cKDN0'
-bot.run(BOT_TOKEN)
+bot.run(os.getenv('TOKEN'))
 
 
 db.close()
